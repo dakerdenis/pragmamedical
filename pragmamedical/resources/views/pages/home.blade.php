@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>HOME ({{ $lang }})</h1>
+    <div class="home__container">
+
+    </div>
 @endsection
