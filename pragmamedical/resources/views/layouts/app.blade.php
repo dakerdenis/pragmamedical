@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Pragmamedical</title>
     <link rel="stylesheet" href="/css/app.css">
+    @yield('styles')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -41,46 +42,6 @@
 
     @yield('content')
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
     <footer class="footer__container">
         <div class="footer__wrapper">
@@ -127,6 +88,7 @@
             switcher.classList.remove('active');
         });
     </script>
+    @yield('scripts')
 </body>
 
 </html>
