@@ -136,8 +136,52 @@
             </div>
         </div>
         <!---Contact--->
-        <div class="home__contanct">
-
+        <div class="home__contact">
+            <div class="home__contact-deco">
+                <img src="/images/contact-Deco.png" alt="">
+            </div>
+            <div class="home__contact-wrapper">
+                <div class="home__contact-name">
+                    <h3>BİZİMLƏ ƏLAQƏ</h3>
+                </div>
+                <div class="home__contact-content">
+                    <form action="#" class="home__contact-form">
+                        <!---name surname-->
+                        <div class="form-input">
+                            <p>&nbsp;</p>
+                            <input type="text" placeholder="Adınız və Soyadınız? *">
+                        </div>
+                        <!---email----->
+                        <div class="form-input">
+                            <p>E-poçt ünvanınız? *</p>
+                            <input type="text">
+                        </div>
+                        <!---number----->
+                        <div class="form-input">
+                            <p>Əlaqə nömrəniz?</p>
+                            <input type="text" placeholder="+12 345 678 90">
+                        </div>
+                        <!---company----->
+                        <div class="form-input">
+                            <p>&nbsp;</p>
+                            <input type="text" placeholder="Şirkətinizin adı?">
+                        </div>
+                        <!---message----->
+                        <div class="form-message">
+                            <textarea name="" id="" placeholder="Mesajinizi burda buraxa bilərsiniz."></textarea>
+                        </div>
+                        <div class="form-terms__button">
+                            <div class="form-terms">
+                                <input type="checkbox" name="#" id="">
+                                <p>I have read and accept the Terms of <a href="#">Service & Privacy Policy *</a></p>
+                            </div>
+                            <div class="form-submit">
+                                <button>Göndər</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
 
         <!--map----->
