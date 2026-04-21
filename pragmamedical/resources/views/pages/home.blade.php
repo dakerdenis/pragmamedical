@@ -77,7 +77,7 @@
                                             <img src="/images/catlog1.png" alt="">
                                         </div>
                                         <div class="catalog__swiper-element-name">
-                                            <h3>Medical name</h3>
+                                            <h3>Digital Stethoscope</h3>
                                             <p>29.99</p>
                                         </div>
                                     </div>
@@ -88,7 +88,7 @@
                                             <img src="/images/catlog1.png" alt="">
                                         </div>
                                         <div class="catalog__swiper-element-name">
-                                            <h3>Medical name</h3>
+                                            <h3>Digital Stethoscope</h3>
                                             <p>29.99</p>
                                         </div>
                                     </div>
@@ -99,7 +99,7 @@
                                             <img src="/images/catlog1.png" alt="">
                                         </div>
                                         <div class="catalog__swiper-element-name">
-                                            <h3>Medical name</h3>
+                                            <h3>Digital Stethoscope</h3>
                                             <p>29.99</p>
                                         </div>
                                     </div>
@@ -110,7 +110,7 @@
                                             <img src="/images/catlog1.png" alt="">
                                         </div>
                                         <div class="catalog__swiper-element-name">
-                                            <h3>Medical name</h3>
+                                            <h3>Digital Stethoscope</h3>
                                             <p>29.99</p>
                                         </div>
                                     </div>
@@ -121,7 +121,7 @@
                                             <img src="/images/catlog1.png" alt="">
                                         </div>
                                         <div class="catalog__swiper-element-name">
-                                            <h3>Medical name</h3>
+                                            <h3>Digital Stethoscope</h3>
                                             <p>29.99</p>
                                         </div>
                                     </div>
@@ -132,7 +132,7 @@
                                             <img src="/images/catlog1.png" alt="">
                                         </div>
                                         <div class="catalog__swiper-element-name">
-                                            <h3>Medical name</h3>
+                                            <h3>Digital Stethoscope</h3>
                                             <p>29.99</p>
                                         </div>
                                     </div>
