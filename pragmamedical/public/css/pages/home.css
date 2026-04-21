@@ -363,7 +363,7 @@
     color: var(--blue-main);
 }
 .form-message textarea{
-
+    background-color: rgba(0, 0, 0, 0);
 }
 .form-message textarea::placeholder{
     color: var(--blue-main);
@@ -402,4 +402,177 @@
     color: #fff;
     font-size: 20px;
     font-weight: 700;
+}
+
+/*******************MAP BLOCK**********/
+.home__map {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 47px;
+}
+.home__map-wrapper {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.home__map-map {
+    width: 806px;
+    height: 621px;
+    box-shadow: 0px 0px 49px -2px #00000030;
+    border-radius: 40px;
+    overflow: hidden;
+}
+.home__map-map iframe{
+    width: 100%;
+    height: 100%;
+}
+.home__map-contact {
+    width: 352px;
+    height: initial;
+}
+.home__map-contact-block {
+    margin-bottom: 40px;
+}
+.home__map-contact-block h3 {
+    color: var(--green);
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.home__map-contact-block:nth-child(1) div{
+    display: flex;
+    flex-direction: column;
+
+}
+.home__map-contact-block:nth-child(1) a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: var(--blue-main);
+    font-size: 20px;
+}
+.home__map-contact-block:nth-child(1) a p{
+    margin-left: 8px;
+}
+.home__map-contact-block:nth-child(1) a:nth-child(1) p{
+    text-decoration: underline;
+}
+.home__map-contact-block:nth-child(1) a:nth-child(2) p{
+    text-decoration: underline;
+}
+.home__map-contact-block:nth-child(1) a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+.home__map-contact-block:nth-child(2) div{
+    display: flex;
+}
+.home__map-contact-block:nth-child(2) div a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    border: 2px solid var(--blue-main);
+    color: var(--blue-main);
+    margin-right: 24px;
+}
+.home__map-contact-block:nth-child(2) div a i{
+    font-size: 20px;
+}
+.home__map-contact-block:nth-child(2) div a:hover{
+    background-color: var(--blue-main);
+    color: #fff;
+}
+.fa {
+}
+.fa-map-marker {
+}
+.fa-phone {
+}
+.fa-envelope {
+}
+.fa-facebook {
+}
+.fa-linkedin {
+}
+.fa-instagram {
+}
+.fa-youtube-play {
+}
+
+
+
+/***********SWIPERS****************/
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.mainSwiper {
+    height: 100%;
+}
+
+.mainSwiper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.productSwiper {
+    padding: 40px 0;
+}
+
+.productSwiper .swiper-slide {
+
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.catalog__swiper-element {
+    height: 389px;
+    width: 305px;
+    background-color: #7c5c5c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.catalog__swiper-element-image {
+    width: 240px;
+    height: 260px;
+        display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.catalog__swiper-element-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.catalog__swiper-element-name {
+    width: 100%;
+    margin-bottom: 8px
+}
+
+.catalog__swiper-element-name h3{
+    height: 24px;
+    font-size: 20px;
+    color: var(--blue-main);
+}
+
+.productSwiper .swiper-slide {
+
+}
+
+.productSwiper .product-slide-active {
+
 }

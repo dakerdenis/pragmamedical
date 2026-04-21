@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Pragmamedical</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="/css/app.css">
     @yield('styles')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -88,6 +90,7 @@
             switcher.classList.remove('active');
         });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     @yield('scripts')
 </body>
 

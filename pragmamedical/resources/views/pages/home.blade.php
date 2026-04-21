@@ -6,7 +6,18 @@
     <div class="home__container">
         <!---swiper---->
         <div class="home__swiper">
+            <div class="swiper mainSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">SLIDE 1</div>
+                    <div class="swiper-slide">SLIDE 2</div>
+                    <div class="swiper-slide">SLIDE 3</div>
+                </div>
 
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
         </div>
         <!---about---->
         <div class="home__about">
@@ -58,7 +69,82 @@
                 </div>
                 <div class="home__catalog-container">
                     <div class="home__catalog-container_swiper">
-
+                        <div class="swiper productSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="catalog__swiper-element">
+                                        <div class="catalog__swiper-element-image">
+                                            <img src="/images/catlog1.png" alt="">
+                                        </div>
+                                        <div class="catalog__swiper-element-name">
+                                            <h3>Medical name</h3>
+                                            <p>29.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="catalog__swiper-element">
+                                        <div class="catalog__swiper-element-image">
+                                            <img src="/images/catlog1.png" alt="">
+                                        </div>
+                                        <div class="catalog__swiper-element-name">
+                                            <h3>Medical name</h3>
+                                            <p>29.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="catalog__swiper-element">
+                                        <div class="catalog__swiper-element-image">
+                                            <img src="/images/catlog1.png" alt="">
+                                        </div>
+                                        <div class="catalog__swiper-element-name">
+                                            <h3>Medical name</h3>
+                                            <p>29.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="catalog__swiper-element">
+                                        <div class="catalog__swiper-element-image">
+                                            <img src="/images/catlog1.png" alt="">
+                                        </div>
+                                        <div class="catalog__swiper-element-name">
+                                            <h3>Medical name</h3>
+                                            <p>29.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="catalog__swiper-element">
+                                        <div class="catalog__swiper-element-image">
+                                            <img src="/images/catlog1.png" alt="">
+                                        </div>
+                                        <div class="catalog__swiper-element-name">
+                                            <h3>Medical name</h3>
+                                            <p>29.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="catalog__swiper-element">
+                                        <div class="catalog__swiper-element-image">
+                                            <img src="/images/catlog1.png" alt="">
+                                        </div>
+                                        <div class="catalog__swiper-element-name">
+                                            <h3>Medical name</h3>
+                                            <p>29.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">ITEM 1</div>
+                                <div class="swiper-slide">ITEM 2</div>
+                                <div class="swiper-slide">ITEM 3</div>
+                                <div class="swiper-slide">ITEM 4</div>
+                                <div class="swiper-slide">ITEM 5</div>
+                                <div class="swiper-slide">ITEM 6</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -186,7 +272,51 @@
 
         <!--map----->
         <div class="home__map">
-
+            <div class="home__map-wrapper">
+                <!--MAp iframe--->
+                <div class="home__map-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d759.5939908868198!2d49.8382821!3d40.4005213!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDDCsDI0JzAyLjAiTiA0OcKwNTAnMTkuNiJF!5e0!3m2!1saz!2saz!4v1776790468411!5m2!1saz!2saz"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <!----contact data --->
+                <div class="home__map-contact">
+                    <div class="home__map-contact-block">
+                        <h3>Əlaqə məlumatıarımız</h3>
+                        <div>
+                            <a target="_blank" href="https://maps.app.goo.gl/kFfzGhkpLvNVZ3Hc9">
+                                <i class="fa fa-map-marker"></i>
+                                <p>Həsən Əliyev küç</p>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-phone"></i>
+                                <p>+994 77 250 93 00</p>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-envelope"></i>
+                                <p>info@pragmamedical.az</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="home__map-contact-block">
+                        <h3>Sosial şəbəkələrimiz</h3>
+                        <div>
+                            <a target="_blank" href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a target="_blank" href="#">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a target="_blank" href="#">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a target="_blank" href="#">
+                                <i class="fa fa-youtube-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 @section('scripts')
