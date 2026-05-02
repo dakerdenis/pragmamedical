@@ -62,10 +62,10 @@
                             Təmizləmə (Cleanse)
                         </div>
                         <div class="rules__steps-text">
-                            <p> Tərif: Yaranın səthindən və ətraf dərisindən səthi çirklənmələrin, boş qalıqların, nekrotik
+                            <p><span>Tərif:</span> Yaranın səthindən və ətraf dərisindən səthi çirklənmələrin, boş qalıqların, nekrotik
                                 toxumanın, mikrobların və/və ya əvvəlki sarğı qalıqlarının aktiv şəkildə uzaqlaşdırılması.
                             </p>
-                            <p>Əsaslandırma: Məqsəd ölü (həyat qabiliyyətini itirmiş) toxumanı, qalıqları və biofilmi aradan
+                            <p><span>Əsaslandırma:</span> Məqsəd ölü (həyat qabiliyyətini itirmiş) toxumanı, qalıqları və biofilmi aradan
                                 qaldırmaqdır.</p>
                         </div>
 
@@ -86,10 +86,10 @@
                             Debridman (Debride)
                         </div>
                         <div class="rules__steps-text">
-                            <p> Tərif: Mexaniki vasitələrdən istifadə etməklə biofilmin, ölü toxumanın, qalıqların və üzvi
+                            <p><span>Tərif:</span> Mexaniki vasitələrdən istifadə etməklə biofilmin, ölü toxumanın, qalıqların və üzvi
                                 maddələrin fiziki şəkildə uzaqlaşdırılması.
                             </p>
-                            <p>Əsaslandırma: Nöqtəvi qanaxma ilə nəticələnməyən debridman biofilmi tam uzaqlaşdırmaya bilər.
+                            <p><span>Əsaslandırma:</span> Nöqtəvi qanaxma ilə nəticələnməyən debridman biofilmi tam uzaqlaşdırmaya bilər.
                                 Biofilmi parçalamaq üçün mexaniki təsir və sürtünmə, maye surfaktant və ya antimikrob
                                 məhlulla birlikdə tətbiq edilməlidir.</p>
                         </div>
@@ -111,10 +111,10 @@
                             Kənarların formalaşdırılması (Refashion)
                         </div>
                         <div class="rules__steps-text">
-                            <p> Tərif: Sağlam dərinin formalaşmasını başlatmaq üçün böyümə faktorlarının ifrazını
+                            <p><span>Tərif:</span> Sağlam dərinin formalaşmasını başlatmaq üçün böyümə faktorlarının ifrazını
                                 stimullaşdırmaq məqsədilə yara kənarlarının aktivləşdirilməsi.
                             </p>
-                            <p>Əsaslandırma: Yara kənarlarında olan ölü toxuma, kallus, hiperkeratotik qalıqlar və yaşlanmış
+                            <p><span>Əsaslandırma:</span> Yara kənarlarında olan ölü toxuma, kallus, hiperkeratotik qalıqlar və yaşlanmış
                                 hüceyrələr biofilmi daşıya bilər. Onların uzaqlaşdırılması epitelizasiyanı və yaranın
                                 yığılmasını sürətləndirmək üçün vacibdir.</p>
                         </div>
@@ -136,10 +136,10 @@
                             Sarğı tətbiqi (Dress)
                         </div>
                         <div class="rules__steps-text">
-                            <p> Tərif: Sağlam dərinin formalaşmasını başlatmaq üçün böyümə faktorlarının ifrazını
+                            <p><span>Tərif:</span> Sağlam dərinin formalaşmasını başlatmaq üçün böyümə faktorlarının ifrazını
                                 stimullaşdırmaq məqsədilə yara kənarlarının aktivləşdirilməsi.
                             </p>
-                            <p>Əsaslandırma: Yara kənarlarında olan ölü toxuma, kallus, hiperkeratotik qalıqlar və yaşlanmış
+                            <p><span>Əsaslandırma:</span> Yara kənarlarında olan ölü toxuma, kallus, hiperkeratotik qalıqlar və yaşlanmış
                                 hüceyrələr biofilmi daşıya bilər. Onların uzaqlaşdırılması epitelizasiyanı və yaranın
                                 yığılmasını sürətləndirmək üçün vacibdir.</p>
                         </div>
@@ -168,8 +168,8 @@
                         <div class="rules__documents-image">
                             <img src="/images/rules-exm.png" alt="">
                         </div>
-                        <div class="rules__documents-content">
-                            <div class="rules__documents-name">
+                        <div class="rules__documents-content-text">
+                            <div class="rules__documents-element_name">
                                 Erkən antibiofilm müdaxilə strategiyası ilə sağalması çətin yaraların qarşısını almaq.
                             </div>
                             <div class="rules__documents-desc">
@@ -186,8 +186,8 @@
                         <div class="rules__documents-image">
                             <img src="/images/rules-exm.png" alt="">
                         </div>
-                        <div class="rules__documents-content">
-                            <div class="rules__documents-name">
+                        <div class="rules__documents-content-text">
+                            <div class="rules__documents-element_name">
                                 Ekspert rəyi məqaləsi.
                             </div>
                             <div class="rules__documents-desc">
@@ -206,8 +206,8 @@
                         <div class="rules__documents-image">
                             <img src="/images/rules-exm.png" alt="">
                         </div>
-                        <div class="rules__documents-content">
-                            <div class="rules__documents-name">
+                        <div class="rules__documents-content-text">
+                            <div class="rules__documents-element_name">
                                 Qalib gəlmək və ya məğlub olmaq: Yara infeksiyasına qalib gəlməyin strategiyası.
                             </div>
                             <div class="rules__documents-desc">

@@ -1,0 +1,45 @@
+
+:root {
+    --blue-main: #063350;
+    --green: #4BAC9A;
+    --text: #373D45;
+    --backgroung: #F6FAFF;
+}
+.doctor_info-wrapper {
+    width: 100%;
+    padding-top: 150px;
+}
+.doctor_info-name {
+}
+.doctor_info-content {
+    width: 1300px;
+    margin: 0 auto;
+}
+.doctor_info-block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.doctor_info-image {
+    width: 452px;
+    height: 647px;
+    background-color: #d9d9d9;
+    border-radius: 18px;
+    overflow: hidden;
+}
+.doctor_info-desc {
+    width: calc(100% -  452px - 50px);
+}
+.doctor_info-desc div {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 117%;
+}
+.doctor_info-desc div span {
+    color: var(--green);
+    font-weight: 500;
+}
+.doctor_info-desc div p {
+    color: #373D45;
+}

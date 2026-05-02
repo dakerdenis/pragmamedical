@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Pragmamedical</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/css/app.css">
     @yield('styles')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,10 +20,11 @@
         </a>
         <!--- HEader navigation--->
         <div class="header__navigation">
-            <a href="#" class="header__navigation-element">Əsas səhifə</a>
+            <a href="/{{ $lang ?? 'az' }}" class="header__navigation-element">Əsas səhifə</a>
             <a href="#" class="header__navigation-element">Haqqımızda</a>
             <a href="#" class="header__navigation-element">Məhsullar</a>
-            <a href="#" class="header__navigation-element">Həkimlər üçün məlumatlar</a>
+            <a href="/{{ $lang ?? 'az' }}/doctor-info" class="header__navigation-element">Həkimlər üçün məlumatlar</a>
+            <a href="/{{ $lang ?? 'az' }}/rules" class="header__navigation-element">Yara Gigiyenası</a>
             <a href="#" class="header__navigation-element">Bloq</a>
             <a href="#" class="header__navigation-element">Əlaqə</a>
         </div>
