@@ -1,0 +1,130 @@
+:root {
+    --blue-main: #063350;
+    --green: #4BAC9A;
+    --text: #373D45;
+    --backgroung: #F6FAFF;
+}
+
+.rules__wrapper {
+    width: 100%;
+    padding-top: 140px;
+}
+
+.rules__name {
+    width: 1313px;
+    margin: 0 auto;
+}
+
+.rules__name h4 {
+    color: var(--blue-main);
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.rules__content {
+    width: 1313px;
+    margin: 0 auto;
+
+}
+
+.rules__image {
+    width: 100%;
+    height: 571px;
+    background-color: #D9D9D9;
+    margin-bottom: 34px;
+    border-radius: 8px;
+}
+
+.rules__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rules__text {
+    width: 100%;
+    margin-bottom: 15px;
+    line-height: 117%;
+}
+
+.rules__text p {
+    color: var(--blue-main);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.rules__p {
+    color: var(--blue-main);
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 117%;
+}
+
+.rules__p span {
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+
+.rules__steps {
+    width: 100%;
+    background-color: var(--backgroung);
+}
+
+.rules__steps-wrapper {
+    width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.rules__steps-block {
+    width: 1294px;
+    height: 154px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 34px;
+}
+
+.rules__steps-number {
+    width: 71px;
+    height: 71px;
+    background-color: var(--green);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.rules__steps-content {
+    max-width: 954px;
+
+}
+
+.rules__steps-name {}
+
+.rules__steps-text {}
+
+.rules__steps-image {}
+
+.rules__documents {}
+
+.rules__documents-wrapper {}
+
+.rules__documents-name {}
+
+.rules__documents-content {}
+
+.rules__documents-element {}
+
+.rules__documents-image {}
+
+.rules__documents-desc {}
+
+.rules__documents-ling {}

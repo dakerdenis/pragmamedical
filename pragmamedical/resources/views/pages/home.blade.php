@@ -62,7 +62,7 @@
             <div class="home__catalog-wrapper">
                 <div class="home__catalog-name_link">
                     <h3>MƏHSULLAR</h3>
-                    <a href="#">
+                    <a href="/{{ $lang }}/catalog">
                         <p>Katalog</p>
                         <img src="/images/catalog-arrow.png" alt="">
                     </a>
@@ -137,12 +137,83 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">ITEM 1</div>
-                                <div class="swiper-slide">ITEM 2</div>
-                                <div class="swiper-slide">ITEM 3</div>
-                                <div class="swiper-slide">ITEM 4</div>
-                                <div class="swiper-slide">ITEM 5</div>
-                                <div class="swiper-slide">ITEM 6</div>
+                                <div class="swiper-slide">
+                                    <div class="catalog__swiper-element">
+                                        <div class="catalog__swiper-element-image">
+                                            <img src="/images/catlog1.png" alt="">
+                                        </div>
+                                        <div class="catalog__swiper-element-name">
+                                            <h3>Digital Stethoscope</h3>
+                                            <p>29.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="catalog__swiper-element">
+                                        <div class="catalog__swiper-element-image">
+                                            <img src="/images/catlog1.png" alt="">
+                                        </div>
+                                        <div class="catalog__swiper-element-name">
+                                            <h3>Digital Stethoscope</h3>
+                                            <p>29.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="catalog__swiper-element">
+                                        <div class="catalog__swiper-element-image">
+                                            <img src="/images/catlog1.png" alt="">
+                                        </div>
+                                        <div class="catalog__swiper-element-name">
+                                            <h3>Digital Stethoscope</h3>
+                                            <p>29.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="catalog__swiper-element">
+                                        <div class="catalog__swiper-element-image">
+                                            <img src="/images/catlog1.png" alt="">
+                                        </div>
+                                        <div class="catalog__swiper-element-name">
+                                            <h3>Digital Stethoscope</h3>
+                                            <p>29.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="catalog__swiper-element">
+                                        <div class="catalog__swiper-element-image">
+                                            <img src="/images/catlog1.png" alt="">
+                                        </div>
+                                        <div class="catalog__swiper-element-name">
+                                            <h3>Digital Stethoscope</h3>
+                                            <p>29.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="catalog__swiper-element">
+                                        <div class="catalog__swiper-element-image">
+                                            <img src="/images/catlog1.png" alt="">
+                                        </div>
+                                        <div class="catalog__swiper-element-name">
+                                            <h3>Digital Stethoscope</h3>
+                                            <p>29.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="catalog__swiper-element">
+                                        <div class="catalog__swiper-element-image">
+                                            <img src="/images/catlog1.png" alt="">
+                                        </div>
+                                        <div class="catalog__swiper-element-name">
+                                            <h3>Digital Stethoscope</h3>
+                                            <p>29.99</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
