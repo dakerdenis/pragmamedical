@@ -7,8 +7,9 @@ use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\PageController;
+use App\Http\Controllers\BlogPageController;
 use App\Models\BlogPost;
-
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Redirect root to default language
@@ -26,9 +27,7 @@ Route::get('/', function () {
 */
 Route::prefix('{lang}')->where(['lang' => 'az|ru|en'])->group(function () {
 
-    Route::get('/', function ($lang) {
-        return view('pages.home', compact('lang'));
-    });
+    Route::get('/', [HomeController::class, 'index']);
 
     Route::get('/catalog', function ($lang) {
         return view('pages.catalog', compact('lang'));
@@ -38,15 +37,8 @@ Route::prefix('{lang}')->where(['lang' => 'az|ru|en'])->group(function () {
         return view('pages.product', compact('lang', 'id'));
     });
 
-    Route::get('/blog', function ($lang) {
-        $posts = BlogPost::latest()->get();
-
-        return view('pages.blog', compact('lang', 'posts'));
-    });
-
-    Route::get('/blog/{id}', function ($lang, $id) {
-        return view('pages.blog_item', compact('lang', 'id'));
-    });
+    Route::get('/blog', [BlogPageController::class, 'index']);
+    Route::get('/blog/{id}', [BlogPageController::class, 'show']);
 
     Route::get('/doctor-info', function ($lang) {
         return view('pages.doctor', compact('lang'));

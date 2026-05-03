@@ -220,76 +220,64 @@
                 </div>
             </div>
         </div>
-        <!---BLOG--->
+<!---BLOG--->
         <div class="home__blog">
             <div class="home__blog-container">
                 <div class="home__blog-name_link">
                     <h3>BLOG</h3>
-                    <a href="#">
-                        <p>Hamsına bax</p>
+                    <a href="/{{ $lang }}/blog">
+                        <p>Hamısına bax</p>
                         <img src="/images/catalog-arrow.png" alt="">
                     </a>
                 </div>
+
+                @if($blogPosts->count() > 0)
                 <div class="home__blog-wrapper">
-                    <a href="#" class="home__blog-big">
+                    {{-- First post — big card --}}
+                    <a href="/{{ $lang }}/blog/{{ $blogPosts[0]->id }}" class="home__blog-big">
                         <div class="home__blog-big_image">
-                            <img src="/images/blog_test.png" alt="">
+                            @if($blogPosts[0]->main_image)
+                                <img src="{{ asset('storage/' . $blogPosts[0]->main_image) }}" alt="">
+                            @else
+                                <img src="/images/blog_test.png" alt="">
+                            @endif
                         </div>
                         <div class="home__blog-big_name">
-                            <h4>In this section, we delve into various aspects of health</h4>
+                            <h4>{{ $blogPosts[0]->{'title_' . $lang} ?? $blogPosts[0]->title_az }}</h4>
                         </div>
                         <div class="home__blog-big_desc">
-                            <p>Explore the world of medical specialties through our blog's spotlight feature. From
-                                cardiology to pediatrics, we share in-depth articles written by our expert physicians. </p>
-                            <p>Explore the world of medical specialties through our blog's spotlight feature. From
-                                cardiology to pediatrics, we share in-depth articles written by our expert physicians.</p>
+                            <p>{{ Str::limit($blogPosts[0]->{'description_' . $lang} ?? $blogPosts[0]->description_az, 250) }}</p>
                         </div>
                     </a>
+
+                    {{-- Posts 2-4 — small cards --}}
+                    @if($blogPosts->count() > 1)
                     <div class="home__blog-small_container">
-                        <a href="#" class="home__blog-small">
+                        @foreach($blogPosts->slice(1) as $post)
+                        <a href="/{{ $lang }}/blog/{{ $post->id }}" class="home__blog-small">
                             <div class="home__blog-small_image">
-                                <img src="/images/blog_test1.png" alt="" srcset="">
+                                @if($post->main_image)
+                                    <img src="{{ asset('storage/' . $post->main_image) }}" alt="">
+                                @else
+                                    <img src="/images/blog_test1.png" alt="">
+                                @endif
                             </div>
                             <div class="home__blog-small_wrapper">
                                 <div class="home__blog-small_name">
-                                    <h4>Discover a treasure trove of practical tips for enhancing</h4>
+                                    <h4>{{ $post->{'title_' . $lang} ?? $post->title_az }}</h4>
                                 </div>
                                 <div class="home__blog-small_desc">
-                                    <p>From nutrition advice to exercise routines, we're here to support your journey toward
-                                        a healthier</p>
+                                    <p>{{ Str::limit($post->{'description_' . $lang} ?? $post->description_az, 120) }}</p>
                                 </div>
                             </div>
                         </a>
-                        <a href="#" class="home__blog-small">
-                            <div class="home__blog-small_image">
-                                <img src="/images/blog_test2.png" alt="" srcset="">
-                            </div>
-                            <div class="home__blog-small_wrapper">
-                                <div class="home__blog-small_name">
-                                    <h4>Discover a treasure trove of practical tips for enhancing</h4>
-                                </div>
-                                <div class="home__blog-small_desc">
-                                    <p>From nutrition advice to exercise routines, we're here to support your journey toward
-                                        a healthier</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="home__blog-small">
-                            <div class="home__blog-small_image">
-                                <img src="/images/blog_test3.png" alt="" srcset="">
-                            </div>
-                            <div class="home__blog-small_wrapper">
-                                <div class="home__blog-small_name">
-                                    <h4>Discover a treasure trove of practical tips for enhancing</h4>
-                                </div>
-                                <div class="home__blog-small_desc">
-                                    <p>From nutrition advice to exercise routines, we're here to support your journey toward
-                                        a healthier</p>
-                                </div>
-                            </div>
-                        </a>
+                        @endforeach
                     </div>
+                    @endif
                 </div>
+                @else
+                <p style="color:#94a3b8; padding:40px 0; text-align:center;">Hələ heç bir məqalə yoxdur</p>
+                @endif
             </div>
         </div>
         <!---Contact--->
