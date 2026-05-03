@@ -8,53 +8,41 @@
             <h3>Blog</h3>
         </div>
 
-        <div class="blog__content">
-            <!--1--->
-            <a href="#" class="blog__element">
-                <div class="blog__content-image">
-                    <img src="/images/blog_test.png" alt="">
-                </div>
-                <div class="blog__content-content">
-                    <p>28.01.26</p>
-                    <h3>Pragmamedical new website is comming event in Crystall hall</h3>
-                </div>
-            </a>
-            <!------>
-            <!--2--->
-            <a href="#" class="blog__element">
-                <div class="blog__content-image">
-                    <img src="/images/blog_test.png" alt="">
-                </div>
-                <div class="blog__content-content">
-                    <p>28.01.26</p>
-                    <h3>Pragmamedical new website is comming event in Crystall hall</h3>
-                </div>
-            </a>
-            <!------>
-            <!--3--->
-            <a href="#" class="blog__element">
-                <div class="blog__content-image">
-                    <img src="" alt="">
-                </div>
-                <div class="blog__content-content">
-                    <p>28.01.26</p>
-                    <h3>Pragmamedical new website is comming event in Crystall hall</h3>
-                </div>
-            </a>
-            <!------>
+<div class="blog__content">
 
-            <!--4--->
-            <a href="#" class="blog__element">
-                <div class="blog__content-image">
-                    <img src="" alt="">
-                </div>
-                <div class="blog__content-content">
-                    <p>28.01.26</p>
-                    <h3>Pragmamedical new website is comming event in Crystall hall</h3>
-                </div>
-            </a>
-            <!------>
+    @foreach($posts as $post)
+        <a href="/{{ $lang }}/blog/{{ $post->id }}" class="blog__element">
 
-        </div>
+            <div class="blog__content-image">
+                @if($post->main_image)
+                    <img src="{{ asset('storage/' . $post->main_image) }}" alt="">
+                @else
+                    <img src="/images/blog_test.png" alt="">
+                @endif
+            </div>
+
+            <div class="blog__content-content">
+                <p>
+                    {{ $post->published_date 
+                        ? \Carbon\Carbon::parse($post->published_date)->format('d.m.y') 
+                        : '' 
+                    }}
+                </p>
+
+                <h3>
+                    @if($lang === 'ru')
+                        {{ $post->title_ru }}
+                    @elseif($lang === 'en')
+                        {{ $post->title_en }}
+                    @else
+                        {{ $post->title_az }}
+                    @endif
+                </h3>
+            </div>
+
+        </a>
+    @endforeach
+
+</div>
     </div>
 @endsection

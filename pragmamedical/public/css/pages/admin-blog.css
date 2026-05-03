@@ -1,0 +1,250 @@
+/* ===== BLOG TABLE EXTRAS ===== */
+.blog-thumb {
+    width: 72px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+}
+
+.blog-thumb-empty {
+    width: 72px;
+    height: 48px;
+    border-radius: 6px;
+    background: var(--background);
+    border: 1px dashed var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cbd5e1;
+    font-size: 18px;
+}
+
+.blog-title-cell {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ===== DELETE MODAL ===== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(6, 51, 80, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.modal-overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-box {
+    background: var(--white, #fff);
+    border-radius: 14px;
+    padding: 32px;
+    width: 420px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    transform: scale(0.92);
+    transition: transform 0.2s ease;
+}
+
+.modal-overlay.show .modal-box {
+    transform: scale(1);
+}
+
+.modal-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 24px;
+}
+
+.modal-icon-danger {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.modal-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--blue-main, #063350);
+    margin-bottom: 8px;
+}
+
+.modal-text {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* ===== CREATE FORM ===== */
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.form-col {
+    min-width: 0;
+}
+
+.required {
+    color: #e74a3b;
+}
+
+.field-error {
+    color: #b91c1c;
+    font-size: 12px;
+    margin-top: 4px;
+    min-height: 16px;
+}
+
+.input-error {
+    border-color: #e74a3b !important;
+    box-shadow: 0 0 0 3px rgba(231, 74, 59, 0.1) !important;
+}
+
+/* ===== UPLOAD ZONE ===== */
+.upload-zone {
+    position: relative;
+    border: 2px dashed var(--border, #E2E8F0);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    overflow: hidden;
+}
+
+.upload-zone:hover,
+.upload-zone.drag-over {
+    border-color: var(--green, #4BAC9A);
+    background: rgba(75, 172, 154, 0.04);
+}
+
+.upload-input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.upload-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    color: #94a3b8;
+    gap: 8px;
+}
+
+.upload-placeholder i {
+    font-size: 36px;
+    color: #cbd5e1;
+}
+
+.upload-placeholder p {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text, #373D45);
+}
+
+.upload-placeholder span {
+    font-size: 12px;
+}
+
+.upload-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    position: relative;
+    min-height: 140px;
+}
+
+.upload-preview img {
+    max-height: 160px;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.upload-remove {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    transition: background 0.15s;
+}
+
+.upload-remove:hover {
+    background: #b91c1c;
+}
+
+/* ===== UPLOAD GRID (extra images) ===== */
+.upload-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.upload-zone-sm .upload-placeholder {
+    padding: 28px 12px;
+}
+
+.upload-zone-sm .upload-placeholder i {
+    font-size: 24px;
+}
+
+.upload-zone-sm .upload-preview {
+    min-height: 100px;
+}
+
+.upload-zone-sm .upload-preview img {
+    max-height: 100px;
+}
+
+/* ===== FORM ACTIONS ===== */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 24px 0 40px;
+}
+
+.btn-lg {
+    padding: 12px 28px;
+    font-size: 15px;
+}
