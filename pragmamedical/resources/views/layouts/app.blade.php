@@ -13,71 +13,11 @@
 
 <body>
 
-    <header class="header__container">
-        <!---header Logo---->
-        <a href="/{{ $lang ?? 'az' }}" class="header__logo">
-            <img src="/images/logo.png" alt="logo">
-        </a>
-        <!--- HEader navigation--->
-        <div class="header__navigation">
-            <a href="/{{ $lang ?? 'az' }}" class="header__navigation-element">Əsas səhifə</a>
-            <a href="#" class="header__navigation-element">Haqqımızda</a>
-            <a href="#" class="header__navigation-element">Məhsullar</a>
-            <a href="/{{ $lang ?? 'az' }}/doctor-info" class="header__navigation-element">Həkimlər üçün məlumatlar</a>
-            <a href="/{{ $lang ?? 'az' }}/rules" class="header__navigation-element">Yara Gigiyenası</a>
-            <a href="#" class="header__navigation-element">Bloq</a>
-            <a href="#" class="header__navigation-element">Əlaqə</a>
-        </div>
-        <!---- Header Language ------>
-        <div class="header__language" id="langSwitcher">
-            <span class="header__language-current">
-                {{ strtoupper($lang ?? 'az') }}
-            </span>
-            <span class="header__language-arrow"></span>
-
-            <div class="header__language-dropdown">
-                <a href="/az">AZ</a>
-                <a href="/ru">RU</a>
-                <a href="/en">EN</a>
-            </div>
-        </div>
-    </header>
 
     @yield('content')
 
 
-    <footer class="footer__container">
-        <div class="footer__wrapper">
-            <div class="footer__data">
-                <a href="#">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    <span>Həsən Əliyev küç</span>
-                </a>
-                <a href="#">
-                    <i class="fa fa-phone" aria-hidden="true"></i>
-                    <span>+994 77 250 93 00</span>
-                </a>
-                <a href="#">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                    <span>info@pragmamedical.az</span>
-                </a>
-            </div>
 
-            <div class="footer__terms">
-                <a href="#">Terms and Conditions</a>
-                <a href="#">Privacy Policy</a>
-            </div>
-        </div>
-
-        <div class="footer__rights">
-            <p>© 2026 Pragma Medical. All rights reserved.</p>
-        </div>
-        <div class="footer__logo">
-            <div class="footer__logo-block">
-                <img src="/images/logo.png" alt="logo">
-            </div>
-        </div>
-    </footer>
     <!---------------->
     <script>
         const switcher = document.getElementById('langSwitcher');
@@ -93,6 +33,49 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     @yield('scripts')
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var SCROLL_OFFSET = -110; // отрицательное = выше, положительное = ниже
+
+            function scrollToTarget(target) {
+                var top = target.getBoundingClientRect().top + window.pageYOffset + SCROLL_OFFSET;
+                window.scrollTo({
+                    top: top,
+                    behavior: 'smooth'
+                });
+            }
+
+            if (window.location.hash) {
+                var target = document.querySelector(window.location.hash);
+                if (target) {
+                    setTimeout(function() {
+                        scrollToTarget(target);
+                    }, 100);
+                }
+            }
+
+            document.querySelectorAll('a[href*="#"]').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    var href = this.getAttribute('href');
+                    var hashIndex = href.indexOf('#');
+                    if (hashIndex === -1) return;
+                    var hash = href.substring(hashIndex);
+                    var path = href.substring(0, hashIndex);
+                    var currentPath = window.location.pathname;
+
+                    if (!path || path === currentPath || path === '/' + (document.documentElement
+                            .lang || 'az')) {
+                        var target = document.querySelector(hash);
+                        if (target) {
+                            e.preventDefault();
+                            history.pushState(null, '', href);
+                            scrollToTarget(target);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

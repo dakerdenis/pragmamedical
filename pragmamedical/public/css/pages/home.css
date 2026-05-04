@@ -148,6 +148,7 @@
 
 .home__blog-container {
     width: 100%;
+    margin-top: 100px;
 }
 
 .home__blog-name_link {
@@ -167,6 +168,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    right: 20%;
+    z-index: 300;
 }
 
 .home__blog-name_link a p {

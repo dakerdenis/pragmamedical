@@ -61,6 +61,9 @@ Route::get('/admin', function () {
 
 Route::get('/admin/login', [AdminAuthController::class, 'showLogin'])->name('admin.login');
 Route::post('/admin/login', [AdminAuthController::class, 'login'])->name('admin.login.post');
+Route::get('/login', function () {
+    return redirect()->route('admin.login');
+})->name('login');
 
 Route::prefix('admin')
     ->name('admin.')
@@ -78,7 +81,8 @@ Route::prefix('admin')
 
         Route::get('/products', [ProductController::class, 'index'])->name('products');
         Route::get('/sliders', [SliderController::class, 'index'])->name('sliders');
-        Route::get('/pages', [PageController::class, 'index'])->name('pages');
 
+        Route::get('/pages', [PageController::class, 'index'])->name('pages');
+        Route::put('/pages', [PageController::class, 'update'])->name('pages.update');
         Route::post('/logout', [AdminAuthController::class, 'logout'])->name('logout');
     });

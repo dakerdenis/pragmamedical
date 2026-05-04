@@ -20,7 +20,7 @@
             </div>
         </div>
         <!---about---->
-        <div class="home__about">
+        <div class="home__about" id="about">
             <div class="home__about-deco">
                 <img src="/images/Deco.png" alt="">
             </div>
@@ -280,8 +280,8 @@
                 @endif
             </div>
         </div>
-        <!---Contact--->
-        <div class="home__contact">
+        <!---Contact---> 
+        <div class="home__contact" id="contact">
             <div class="home__contact-deco">
                 <img src="/images/contact-Deco.png" alt="">
             </div>

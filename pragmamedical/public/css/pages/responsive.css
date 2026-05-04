@@ -1,0 +1,47 @@
+/* -- Mobile responsive -- */
+@media screen and (min-width: 320px) {
+    /* -- Basic CSS -- */
+    .wrapper {
+        max-width: calc(100% - 10%);
+    }
+    /* -- Text CSS -- */
+    .page-title {
+        font-size: 2rem;
+        margin: 2rem 0rem;
+    }
+    .card-name {
+        font-size: 1.25rem;
+    }
+    .text {
+        font-size: 0.875rem;
+    }
+    /* -- -- */
+    .catalog {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* -- Laptop responsive -- */
+@media screen and (min-width: 1200px) {
+    /* -- Basic CSS -- */
+    .wrapper {
+        max-width: calc(100% - 10%);
+    }
+    /* -- Text CSS -- */
+    .page-title {
+        font-size: 3rem;
+        margin: 2rem 0rem;
+    }
+    .card-name {
+        font-size: 1.5rem;
+    }
+    .text {
+        font-size: 1rem;
+    }
+    /* -- -- */
+    .catalog {
+        grid-template-columns: repeat(2 , 1fr);
+        gap: 2rem;
+    }
+}
