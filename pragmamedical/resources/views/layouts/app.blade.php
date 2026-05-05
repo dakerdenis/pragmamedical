@@ -12,10 +12,69 @@
 </head>
 
 <body>
+    <header class="header__container">
+        <!---header Logo---->
+        <a href="/{{ $lang ?? 'az' }}" class="header__logo">
+            <img src="/images/logo.png" alt="logo">
+        </a>
+        <!--- HEader navigation--->
+        <div class="header__navigation">
+            <a href="/{{ $lang ?? 'az' }}" class="header__navigation-element">{{ t('header.home') }}</a>
+            <a href="/{{ $lang ?? 'az' }}#about" class="header__navigation-element">{{ t('header.about') }}</a>
+            <a href="/{{ $lang ?? 'az' }}/catalog" class="header__navigation-element">{{ t('header.products') }}</a>
+            <a href="/{{ $lang ?? 'az' }}/doctor-info" class="header__navigation-element">{{ t('header.doctor') }}</a>
+            <a href="/{{ $lang ?? 'az' }}/rules" class="header__navigation-element">{{ t('header.hygiene') }}</a>
+            <a href="/{{ $lang ?? 'az' }}/blog" class="header__navigation-element">{{ t('header.blog') }}</a>
+            <a href="/{{ $lang ?? 'az' }}#contact" class="header__navigation-element">{{ t('header.contact') }}</a>
+        </div>
+        <!---- Header Language ------>
+        <div class="header__language" id="langSwitcher">
+            <span class="header__language-current">
+                {{ strtoupper($lang ?? 'az') }}
+            </span>
+            <span class="header__language-arrow"></span>
 
+            <div class="header__language-dropdown">
+                <a href="/az">AZ</a>
+                <a href="/ru">RU</a>
+                <a href="/en">EN</a>
+            </div>
+        </div>
+    </header>
 
     @yield('content')
+    <footer class="footer__container">
+        <div class="footer__wrapper">
+            <div class="footer__data">
+                <a href="#">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <span>Həsən Əliyev küç</span>
+                </a>
+                <a href="#">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <span>+994 77 250 93 00</span>
+                </a>
+                <a href="#">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span>info@pragmamedical.az</span>
+                </a>
+            </div>
 
+<div class="footer__terms">
+    <a href="#">{{ t('footer.terms') }}</a>
+    <a href="#">{{ t('footer.privacy') }}</a>
+</div>
+        </div>
+
+        <div class="footer__rights">
+            <p>{{ t('footer.rights') }}</p>
+        </div>
+        <div class="footer__logo">
+            <div class="footer__logo-block">
+                <img src="/images/logo.png" alt="logo">
+            </div>
+        </div>
+    </footer>
 
 
     <!---------------->

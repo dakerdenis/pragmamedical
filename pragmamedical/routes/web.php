@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\BlogPageController;
 use App\Models\BlogPost;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CatalogController;
 /*
 |--------------------------------------------------------------------------
 | Redirect root to default language
@@ -29,13 +30,8 @@ Route::prefix('{lang}')->where(['lang' => 'az|ru|en'])->group(function () {
 
     Route::get('/', [HomeController::class, 'index']);
 
-    Route::get('/catalog', function ($lang) {
-        return view('pages.catalog', compact('lang'));
-    });
-
-    Route::get('/catalog/{id}', function ($lang, $id) {
-        return view('pages.product', compact('lang', 'id'));
-    });
+Route::get('/catalog', [CatalogController::class, 'index']);
+    Route::get('/catalog/{id}', [CatalogController::class, 'show']);
 
     Route::get('/blog', [BlogPageController::class, 'index']);
     Route::get('/blog/{id}', [BlogPageController::class, 'show']);
@@ -79,7 +75,13 @@ Route::prefix('admin')
         Route::put('/blog/{post}', [BlogController::class, 'update'])->name('blog.update');
         Route::delete('/blog/{post}', [BlogController::class, 'destroy'])->name('blog.destroy');
 
-        Route::get('/products', [ProductController::class, 'index'])->name('products');
+Route::get('/products', [ProductController::class, 'index'])->name('products');
+        Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
+        Route::post('/products', [ProductController::class, 'store'])->name('products.store');
+        Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
+        Route::put('/products/{product}', [ProductController::class, 'update'])->name('products.update');
+        Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
+        
         Route::get('/sliders', [SliderController::class, 'index'])->name('sliders');
 
         Route::get('/pages', [PageController::class, 'index'])->name('pages');

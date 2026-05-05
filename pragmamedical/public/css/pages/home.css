@@ -65,6 +65,7 @@
     font-size: 40px;
     color: #fff;
     font-weight: 600;
+    min-width: 130px;
 }
 
 .home__about-desc {

@@ -15,26 +15,31 @@
             <div class="card-title">{{ strtoupper($groupName) }}</div>
 
             @foreach($keys as $key => $values)
+                @php
+                    $maxLen = max(
+                        strlen($values['az'] ?? ''),
+                        strlen($values['ru'] ?? ''),
+                        strlen($values['en'] ?? '')
+                    );
+                    $isLong = $maxLen > 80;
+                @endphp
                 <div class="trans-row">
                     <div class="trans-key">
                         <code>{{ $key }}</code>
                     </div>
-                    <div class="trans-fields">
+                    <div class="trans-fields {{ $isLong ? 'trans-fields--vertical' : '' }}">
+                        @foreach(['az', 'ru', 'en'] as $lng)
                         <div class="trans-field">
-                            <label class="trans-label">AZ</label>
-                            <input type="text" name="trans[{{ $key }}][az]"
-                                   value="{{ $values['az'] ?? '' }}" class="form-input">
+                            <label class="trans-label">{{ strtoupper($lng) }}</label>
+                            @if($isLong)
+                                <textarea name="trans[{{ $key }}][{{ $lng }}]"
+                                          class="form-input trans-textarea">{{ $values[$lng] ?? '' }}</textarea>
+                            @else
+                                <input type="text" name="trans[{{ $key }}][{{ $lng }}]"
+                                       value="{{ $values[$lng] ?? '' }}" class="form-input">
+                            @endif
                         </div>
-                        <div class="trans-field">
-                            <label class="trans-label">RU</label>
-                            <input type="text" name="trans[{{ $key }}][ru]"
-                                   value="{{ $values['ru'] ?? '' }}" class="form-input">
-                        </div>
-                        <div class="trans-field">
-                            <label class="trans-label">EN</label>
-                            <input type="text" name="trans[{{ $key }}][en]"
-                                   value="{{ $values['en'] ?? '' }}" class="form-input">
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             @endforeach
@@ -69,6 +74,9 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
 }
+.trans-fields--vertical {
+    grid-template-columns: 1fr;
+}
 .trans-label {
     display: block;
     font-size: 11px;
@@ -76,6 +84,12 @@
     color: #94a3b8;
     margin-bottom: 4px;
     text-transform: uppercase;
+}
+.trans-textarea {
+    min-height: 100px;
+    resize: vertical;
+    font-size: 13px;
+    line-height: 1.5;
 }
 </style>
 

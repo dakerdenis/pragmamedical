@@ -1,4 +1,11 @@
     
+    .main_product{
+      max-width: 1440px;
+      margin: 0 auto;
+      padding-top: 140px;
+      margin-bottom: 200px;
+      min-height: calc(100vh - 350px);
+    }
     .product {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -24,7 +31,7 @@
     .main-image img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
 
     .thumbs {
